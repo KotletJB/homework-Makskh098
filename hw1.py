@@ -28,11 +28,10 @@ def poland_cases_by_date(day: int, month: int, year: int = 2020) -> int:
     :return: Number of cases on a given date as an integer
     """
     
-    def poland_cases_by_date(day,month,year=2020):
-      df= confirmed_cases
-      year1=year-2000
-      result=df.loc[df["Country/Region"]=="Poland"][f"{month}/{day}/{year1}"].values[0]
-      return result
+    df= confirmed_cases
+    year1=year-2000
+    result=df.loc[df["Country/Region"]=="Poland"][f"{month}/{day}/{year1}"].values[0]
+    return result
 
 
 def top5_countries_by_date(day: int, month: int, year: int = 2020) -> List[str]:
